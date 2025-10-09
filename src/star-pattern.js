@@ -284,4 +284,134 @@ Total iterations = n + (n-1) + (n-2) + ... + 1 = n(n + 1)/2
 - Outer loop (i): Controls the number being printed.  
 - Inner loop (j): Controls how many times the number repeats.  
 - The count of numbers **decreases** each row.
+
+
+----------------------------------------
+💡 Example: Combined Star Pattern (Upward + Downward Triangle)
+----------------------------------------
+
+let n = 5;
+
+// 🔼 Upper Triangle
+for (let i = 0; i < n; i++) {
+  let row = "";
+  for (let j = 0; j <= i; j++) {
+    row += "*";
+  }
+  console.log(row);
+}
+
+// 🔽 Lower Triangle
+for (let i = 6; i >= 0; i--) {
+  let row = "";
+  for (let j = 0; j <= i; j++) {
+    row += "*";
+  }
+  console.log(row);
+}
+
+----------------------------------------
+🧩 Explanation
+----------------------------------------
+🔼 First Loop (Upward):
+i = 0 → "*"  
+i = 1 → "**"  
+i = 2 → "***"  
+i = 3 → "****"  
+i = 4 → "*****"
+
+🔽 Second Loop (Downward):
+i = 6 → "*******"  
+i = 5 → "******"  
+i = 4 → "*****"  
+i = 3 → "****"  
+i = 2 → "***"  
+i = 1 → "**"  
+i = 0 → "*"
+
+✅ Output:
+*
+**
+***
+****
+*****
+*******
+******
+*****
+****
+***
+**
+*
+
+----------------------------------------
+📊 Complexity Analysis
+----------------------------------------
+- Each half has nested loops (one increasing, one decreasing).  
+- Total operations ≈ n² + n² → still **O(n²)**.  
+➡️ **Time Complexity:** O(n²)  
+➡️ **Space Complexity:** O(n) (temporary 'row' string)
+
+----------------------------------------
+🎯 Key Concept
+----------------------------------------
+- **Outer loop** controls how many lines to print.  
+- **Inner loop** controls how many stars per line.  
+- First part builds the triangle upward, second part downward.
+
+
+----------------------------------------
+💡 Example: Right-Aligned Half Pyramid
+----------------------------------------
+
+let n = 6;
+
+for (let i = 0; i < n; i++) {          // Outer loop → controls rows
+  let row = "";
+
+  // Print leading spaces (decreasing count)
+  for (let j = n - 1; j > i; j--) {
+    row += " ";
+  }
+
+  // Print stars (increasing count)
+  for (let k = 0; k <= i; k++) {
+    row += "*";
+  }
+
+  console.log(row);
+}
+
+----------------------------------------
+🧩 Explanation (when n = 6)
+----------------------------------------
+i = 0 → "     *"
+i = 1 → "    **"
+i = 2 → "   ***"
+i = 3 → "  ****"
+i = 4 → " *****"
+i = 5 → "******"
+
+✅ Output:
+     *
+    **
+   ***
+  ****
+ *****
+******
+
+----------------------------------------
+📊 Complexity Analysis
+----------------------------------------
+- Outer loop runs n times.
+- Inner loops together run roughly n(n + 1)/2 times.
+
+➡️ **Time Complexity:** O(n²)  
+➡️ **Space Complexity:** O(n) (temporary 'row' string)
+
+----------------------------------------
+🎯 Key Concept
+----------------------------------------
+- **First inner loop:** prints spaces → makes the pattern right-aligned.  
+- **Second inner loop:** prints stars → increases with each row.  
+- Together they form a **right-angled triangle aligned to the right**.
 */
