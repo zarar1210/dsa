@@ -129,6 +129,32 @@ n = 2 → 2² = 4 operations
 n = 3 → 2³ = 8 operations  
 n = 4 → 2⁴ = 16 operations
 
+Okay 👇 simple explanation —
+
+`2ⁿ` means **2 multiplied by itself n times**
+
+| n | 2ⁿ | Loop runs this many times |
+| - | -- | ------------------------- |
+| 1 | 2  | 2 times                   |
+| 2 | 4  | 4 times                   |
+| 3 | 8  | 8 times                   |
+| 4 | 16 | 16 times                  |
+| 5 | 32 | 32 times                  |
+
+So in code 👇
+
+```js
+function exponentialLoop(n) {
+  for (let i = 0; i < 2 ** n; i++) {
+    console.log(i);
+  }
+}
+exponentialLoop(5);  // runs 32 times
+```
+
+💡 `2⁵` (2 power 5) = 2×2×2×2×2 = **32**.
+
+
 ✅ Time Complexity: O(2ⁿ)
 
 ----------------------------------------
