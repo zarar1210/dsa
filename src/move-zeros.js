@@ -9,10 +9,9 @@ let moveZeros = function (nums) {
     }
   }
   for (let i = x; i < nums.length; i++) {
-    nums[x] = 0;
+    nums[i] = 0;
   }
   return nums;
 };
-
-let arr = [1, 0, 2, 3];
+let arr = [1, 0, 2, 0, 1, 8];
 console.log(moveZeros(arr));
