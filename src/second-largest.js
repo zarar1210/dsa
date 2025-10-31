@@ -60,3 +60,25 @@ Step-by-step:
 - Update both correctly during iteration.  
 - Works efficiently without sorting or extra arrays.
 */
+
+function secondLargest(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
+  let flg = -Infinity;
+  let slg = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > flg) {
+      slg = flg;
+      flg = arr[i];
+    } else if (arr[i] > slg && arr[i] != flg) {
+      slg = arr[i];
+    }
+  }
+  return slg;
+}
+
+let arr = [1, 3, 4, 4];
+let res = secondLargest(arr);
+console.log(res); // 👉 44
