@@ -1,8 +1,9 @@
 console.log("Welcome to revese integer");
 
 /*
-Quick Note:
+Quick Notes:
 1. Signed 32 bit integer: It should come under this range
+2. Calculate of power : Math.pow(2, 31)
 */
 
 let reverseInteger = function (n) {
