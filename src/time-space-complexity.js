@@ -2,8 +2,14 @@
 ----------------------------------------
 💡 Time Complexity
 ----------------------------------------
-- Used to measure the efficiency of an algorithm in terms of **speed** as the input size grows.
-- It tells how the **execution time** increases with respect to input size (n).
+Many times, there are multiple ways to solve a problem using different algorithms. To compare these algorithms and understand their performance, we use time and space complexity. It helps us measure how much time and memory an algorithm will take when implemented.
+Every engineer should estimate the time and space complexity before starting an application. 
+It has a great impact on the performance experienced by users. While building an application, developers should analyze the complexity of their code. 
+We mainly focus on two types - time complexity and space complexity.
+Time Complexity:
+Time complexity does not measure the exact time a program takes to run, as it varies across machines and configurations. Instead, it shows how the running time increases as the input size grows.
+It measures the efficiency of an algorithm in terms of speed as the input size increases.
+It indicates how the execution time grows with respect to the input size (n).
 
 ----------------------------------------
 🔹 Example 1: Linear Search
