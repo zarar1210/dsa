@@ -14,7 +14,7 @@ function countDigit(n) {
 }
 let n = -343;
 let res = countDigit(n);
-console.log(res);
+//console.log(res);
 
 /*
 Quick Note:

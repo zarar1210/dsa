@@ -22,17 +22,3 @@ let n = 121;
 let result = palindrome(n);
 //console.log(result);
 */
-
-let palindrome = function (n) {
-  let original = n;
-  let rev = 0;
-  while (n > 0) {
-    let reminder = n % 10;
-    rev = rev * 10 + reminder;
-    n = Math.floor(n / 10);
-  }
-  return original == rev;
-};
-let n = 121;
-let result = palindrome(n);
-console.log(result);

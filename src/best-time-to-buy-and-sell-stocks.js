@@ -10,6 +10,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot
  achieve any profit, return 0.
 */
 
+/*
 let prices = [7, 1, 5, 3, 6, 4];
 
 let stock = function (nums) {
@@ -26,3 +27,5 @@ let stock = function (nums) {
   return maxProfit;
 };
 console.log(stock(prices));
+
+*/
